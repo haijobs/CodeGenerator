@@ -22,7 +22,7 @@ public class DemoController {
     @Autowired
     DemoService demoService;
 
-    @RequestMapping("add")
+    @RequestMapping("add1")
     @ResponseBody
     public String add(Demo demo) {
         demoService.save(demo);
