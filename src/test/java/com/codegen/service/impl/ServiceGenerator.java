@@ -1,15 +1,14 @@
 package com.codegen.service.impl;
 
+import com.codegen.service.CodeGenerator;
+import com.codegen.service.CodeGeneratorManager;
+import com.codegen.util.StringUtils;
+import freemarker.template.Configuration;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.HashMap;
 import java.util.Map;
-
-import com.codegen.service.CodeGenerator;
-import com.codegen.service.CodeGeneratorManager;
-import com.codegen.util.StringUtils;
-
-import freemarker.template.Configuration;
 /**
  * Service层 代码生成器
  * Created by zhh on 2017/09/20.
@@ -57,7 +56,7 @@ public class ServiceGenerator extends CodeGeneratorManager implements CodeGenera
 	 * @return
 	 */
 	private Map<String, Object> getDataMapInit(String modelName, String sign, String modelNameUpperCamel) {
-		Map<String, Object> data = new HashMap<>();
+		Map<String, Object> data = new HashMap<String, Object>();
 		data.put("date", DATE);
 		data.put("author", AUTHOR);
 		data.put("sign", sign);
